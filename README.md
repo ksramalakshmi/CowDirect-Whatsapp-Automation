@@ -1,6 +1,6 @@
 # CowDirect-Whatsapp-Automation
 A repository to share Python codes to automate bulk WhatsApp messages.
 
-Input - CSV File\n
-Action - Sending automated WhatsApp messages\n
-Output - Prompt after all messages are sent successfully else incorrect file input\n
+Input - CSV File <br/>
+Action - Sending automated WhatsApp messages <br/>
+Output - Prompt after all messages are sent successfully else incorrect file input <br/>
