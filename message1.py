@@ -24,7 +24,7 @@ for index, row in data.iterrows():
             message="""
 Dear Customer,
 
-Please find the milk a/c from 01/04/2023 to """ + today + """.
+Milk account from 01/04/2023 to """ + today + """.
 
 Milk supplied:""" + milk_supplied + """ Ltrs
 Supplied milk cost: Rs.""" + cost_of_milk + """
@@ -32,14 +32,14 @@ Paid this month: Rs.""" + payment_received + """
 Last month advance: Rs.""" + str(previous_month).strip('-') + """
 Balance excess: Rs.""" + str(remaining_balance).strip('-') + """
 
-Assuring our services,
+Enjoy Natural Cow Milk Daily,
 Team CowDirect
                     """
         elif remaining_balance < 0 and previous_month > 0:
             message="""
 Dear Customer,
 
-Please find the milk a/c from 01/04/2023 to """ + today + """.
+Milk account from 01/04/2023 to """ + today + """.
 
 Milk supplied:""" + milk_supplied + """ Ltrs
 Supplied milk cost: Rs.""" + cost_of_milk + """
@@ -47,7 +47,7 @@ Paid this month: Rs.""" + payment_received + """
 Last month due: Rs.""" + str(previous_month) + """
 Balance excess: Rs.""" + str(remaining_balance).strip('-') + """
 
-Assuring our services,
+Enjoy Natural Cow Milk Daily,
 Team CowDirect
                     """
             
@@ -55,7 +55,7 @@ Team CowDirect
             message="""
 Dear Customer,
 
-Please find the milk a/c from 01/04/2023 to """ + today + """.
+Milk account from 01/04/2023 to """ + today + """.
 
 Milk supplied: """ + milk_supplied + """ Ltrs
 Supplied milk cost : Rs.""" + cost_of_milk + """
@@ -63,9 +63,9 @@ Paid this month: Rs.""" + payment_received + """
 Last month due: Rs.""" + str(previous_month) + """
 *Balance due: Rs.""" + str(remaining_balance) + """*
 
-*Kindly make the payment*,
+*Kindly pay Rs.""" + str(remaining_balance) + """*,
 
-Assuring our services,
+Enjoy Natural Cow Milk Daily,
 Team CowDirect
                     """
 
@@ -73,7 +73,7 @@ Team CowDirect
             message="""
 Dear Customer,
 
-Please find the milk a/c from 01/04/2023 to """ + today + """.
+Milk account from 01/04/2023 to """ + today + """.
 
 Milk supplied: """ + milk_supplied + """ Ltrs
 Supplied milk cost : Rs.""" + cost_of_milk + """
@@ -81,9 +81,9 @@ Paid this month: Rs.""" + payment_received + """
 Last month advance: Rs.""" + str(previous_month).strip('-') + """
 *Balance due: Rs.""" + str(remaining_balance) + """*
 
-*Kindly make the payment*,
+*Kindly pay Rs.""" + str(remaining_balance) + """*,
 
-Assuring our services,
+Enjoy Natural Cow Milk Daily,
 Team CowDirect
                     """
 
