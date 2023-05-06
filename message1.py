@@ -4,6 +4,10 @@ from datetime import date, datetime
 
 data = pd.read_csv("sample.csv")
 
+if len(data.columns) != 10:
+    print("Please check the file. It should have 10 columns.")
+    exit()
+
 today = date.today()
 today = today.strftime("%d/%m/%Y")
 
