@@ -18,22 +18,22 @@ for index, row in data.iterrows():
     if row['Status'] != 'Inactive':
         milk_supplied = str(row['Milk supply'])
         payment_received = str(row['This month payment received'])
-        previous_month = round(row['Previous month pending bill'])
+        previous_month = row['Previous month pending bill']
         cost_of_milk = str(row['Milk sale value'])
-        remaining_balance = round(row['Remaining to pay'])
+        remaining_balance = row['Remaining to pay']
 
         message= """"""
-        if remaining_balance < 0 and previous_month <= 0:
+        if remaining_balance <= 0 and previous_month <= 0:
             message="""
 Dear Customer,
 
 Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied:""" + milk_supplied + """ Ltrs
-Supplied milk cost: Rs.""" + cost_of_milk + """
-Paid this month: Rs.""" + payment_received + """
-Last month advance: Rs.""" + str(previous_month).strip('-') + """
-Balance excess: Rs.""" + str(remaining_balance).strip('-') + """
+Supplied milk cost: ₹ """ + cost_of_milk + """
+Paid this month: ₹ """ + payment_received + """
+Last month advance: ₹ """ + str(previous_month).strip('-') + """
+Balance excess: ₹ """ + str(remaining_balance).strip('-') + """
 
 Enjoy Natural Cow Milk Daily,
 Team CowDirect
@@ -45,10 +45,10 @@ Dear Customer,
 Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied:""" + milk_supplied + """ Ltrs
-Supplied milk cost: Rs.""" + cost_of_milk + """
-Paid this month: Rs.""" + payment_received + """
-Last month due: Rs.""" + str(previous_month) + """
-Balance excess: Rs.""" + str(remaining_balance).strip('-') + """
+Supplied milk cost: ₹ """ + cost_of_milk + """
+Paid this month: ₹ """ + payment_received + """
+Last month due: ₹ """ + str(previous_month) + """
+Balance excess: ₹ """ + str(remaining_balance).strip('-') + """
 
 Enjoy Natural Cow Milk Daily,
 Team CowDirect
@@ -61,30 +61,30 @@ Dear Customer,
 Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied: """ + milk_supplied + """ Ltrs
-Supplied milk cost : Rs.""" + cost_of_milk + """
-Paid this month: Rs.""" + payment_received + """
-Last month due: Rs.""" + str(previous_month) + """
-*Balance due: Rs.""" + str(remaining_balance) + """*
+Supplied milk cost : ₹ """ + cost_of_milk + """
+Paid this month: ₹ """ + payment_received + """
+Last month due: ₹ """ + str(previous_month) + """
+*Balance due: ₹ """ + str(remaining_balance) + """*
 
-*Kindly pay Rs.""" + str(remaining_balance) + """*,
+*Kindly pay ₹ """ + str(remaining_balance) + """ to 9036543335 through Gpay or Paytm or Phonepe.*,
 
 Enjoy Natural Cow Milk Daily,
 Team CowDirect
                     """
 
-        elif remaining_balance > 0 and previous_month <= 0:
+        elif remaining_balance > 0 and previous_month < 0:
             message="""
 Dear Customer,
 
 Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied: """ + milk_supplied + """ Ltrs
-Supplied milk cost : Rs.""" + cost_of_milk + """
-Paid this month: Rs.""" + payment_received + """
-Last month advance: Rs.""" + str(previous_month).strip('-') + """
-*Balance due: Rs.""" + str(remaining_balance) + """*
+Supplied milk cost : ₹ """ + cost_of_milk + """
+Paid this month: ₹ """ + payment_received + """
+Last month advance: ₹ """ + str(previous_month).strip('-') + """
+*Balance due: ₹ """ + str(remaining_balance) + """*
 
-*Kindly pay Rs.""" + str(remaining_balance) + """*,
+*Kindly pay ₹ """ + str(remaining_balance) + """*,
 
 Enjoy Natural Cow Milk Daily,
 Team CowDirect
