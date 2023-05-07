@@ -84,7 +84,7 @@ Paid this month: ₹ """ + payment_received + """
 Last month advance: ₹ """ + str(previous_month).strip('-') + """
 *Balance due: ₹ """ + str(remaining_balance) + """*
 
-*Kindly pay ₹ """ + str(remaining_balance) + """*,
+*Kindly pay ₹ """ + str(remaining_balance) + """ to 9036543335 through Gpay or Paytm or Phonepe.*,
 
 Enjoy Natural Cow Milk Daily,
 Team CowDirect
