@@ -94,7 +94,7 @@ Team CowDirect
         current_time = current_time.split(":")
         current_time = [int(i) for i in current_time]
 
-        sendwhatmsg(phone_no, message, tab_close=True)
+        sendwhatmsg(phone_no, message, tab_close=True, wait_time=20)
 
         print(message)
         print("---------------------------------------------------")
