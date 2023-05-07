@@ -23,7 +23,7 @@ for index, row in data.iterrows():
         remaining_balance = row['Remaining to pay']
 
         message= """"""
-        if remaining_balance <= 0 and previous_month <= 0:
+        if remaining_balance < 0 and previous_month <= 0:
             message="""
 Dear Customer,
 
@@ -72,7 +72,7 @@ Enjoy Natural Cow Milk Daily,
 Team CowDirect
                     """
 
-        elif remaining_balance > 0 and previous_month < 0:
+        elif remaining_balance > 0 and previous_month <= 0:
             message="""
 Dear Customer,
 
