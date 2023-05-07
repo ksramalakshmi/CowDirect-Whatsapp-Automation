@@ -9,7 +9,10 @@ if len(data.columns) != 10:
     exit()
 
 today = date.today()
-today = today.strftime("%d/%m/%Y")
+today = today.strftime('%d %b %Y')
+
+first_day = date.today().replace(day=1)
+first_day = first_day.strftime('%d %b %Y')
 
 for index, row in data.iterrows():
     if row['Status'] != 'Inactive':
@@ -24,7 +27,7 @@ for index, row in data.iterrows():
             message="""
 Dear Customer,
 
-Milk account from 01/04/2023 to """ + today + """.
+Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied:""" + milk_supplied + """ Ltrs
 Supplied milk cost: Rs.""" + cost_of_milk + """
@@ -39,7 +42,7 @@ Team CowDirect
             message="""
 Dear Customer,
 
-Milk account from 01/04/2023 to """ + today + """.
+Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied:""" + milk_supplied + """ Ltrs
 Supplied milk cost: Rs.""" + cost_of_milk + """
@@ -55,7 +58,7 @@ Team CowDirect
             message="""
 Dear Customer,
 
-Milk account from 01/04/2023 to """ + today + """.
+Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied: """ + milk_supplied + """ Ltrs
 Supplied milk cost : Rs.""" + cost_of_milk + """
@@ -73,7 +76,7 @@ Team CowDirect
             message="""
 Dear Customer,
 
-Milk account from 01/04/2023 to """ + today + """.
+Milk account from """+ first_day +""" to """ + today + """.
 
 Milk supplied: """ + milk_supplied + """ Ltrs
 Supplied milk cost : Rs.""" + cost_of_milk + """
